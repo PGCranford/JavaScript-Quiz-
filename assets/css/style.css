@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  background-color: rgb(127, 207, 163);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 6.9rem;
+}
+
+.scorelink {
+  font-size: 2.8rem;
+
+}
+
+.timer {
+  font-size: 1.8rem;
+  padding-top: 2.5rem;
+  padding-left: 14.5rem;
+  display: inline;
+
+}
+
+.scorelink,
+.timer {
+  width: 100%;
+  display: inline;
+}
+
+.javaquiz {}
