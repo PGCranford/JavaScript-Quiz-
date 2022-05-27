@@ -1,5 +1,5 @@
 var time = 12;
-var questionEl = 
+//var questionEl = 
 var question1 = "Inside which HTML element do we put the JavaScript?"
 var question2 = "How do you create a function in JavaScript?"
 
@@ -21,15 +21,18 @@ document.getElementById("startBtn").addEventListener("click", function () {
 
 
   }
+
   var intervalId = setInterval(startTime, 1000);
-
-  if (startTime() === true) {
-
-    //startQuiz = function () {
-
-    document.getElementById("questions").innerHTML = question1
-
-    //}
-  }
-
 });
+
+
+// var timeStamp = startTime
+
+// startQuiz = function () {
+//   if (timeStamp() === true) {
+
+//     document.getElementById("questions").innerHTML = question1
+
+//     //}
+//   }
+
