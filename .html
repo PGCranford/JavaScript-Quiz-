@@ -12,18 +12,31 @@
 <header class="header">
     <h1 class="scorelink" id="high-scores">High Scores</h1>
     <div>
-        <div class="timer">Time Remaining:</div>
-        <div id="startTime"></div>
+        <div class="clock">Time Remaining:</div>
+        <div class="time" id="timer">placeholder</div>
     </div>
 </header>
+<main>
+    <h2 class="javaquiz" id="quiz-start">Welcome to the JavaScript Coding Quiz</h2>
+    <h3>Are you ready to test your knowledge against the clock? Press the start button to beging your quiz. Good
+        luck!
+    </h3>
+    </div>
+    <button type="button" class="startbtn" id="startBtn">Start Quiz</button>
+    </div>
+</main>
 
 <body>
-    <h2 class="javaquiz" id="quiz-start">Welcome to the JavaScript Coding Quiz</h2>
-    <h3>Are you ready to test your knowledge against the clock? Press the start button to beging your quiz. Good luck!
-    </h3>
-    <div class="java-quiz">
-        <button class="startbtn" id="startBtn" onclick="updateCountdown">Start Quiz</button>
-    </div>
+    <div class="questionList" id="questions">Questions Placeholder</div>
+
+    <form id="answers">
+        </div><button type="submit" class="answerText" id="answer-A">A</button>
+        </div><button type="submit" class="answerText" id="answer-B">B</button>
+        </div><button type="submit" class="answerText" id="answer-B">C</button>
+        </div><button type="submit" class="answerText" id="answer-D">D</button>
+    </form>
+
+
 </body>
 <script src="./assets/js/script.js"></script>
 

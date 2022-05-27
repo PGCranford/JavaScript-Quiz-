@@ -1,71 +1,35 @@
-//function startQuiz() {
-
-//create start button
-//var startBtn =
-//set timer 
-const startingSeconds = .01;
-let time = startingSeconds;
-const countdownEl = document.getElementById("startTime");
-
-
-setInterval(updateCountdown, 1000);
-
-function updateCountdown() {
-
-  time -= 1;
-
-  countdownEl.innerHTML = `${seconds}`;
-
-  // const seconds = Math.floor(time);
-
-
-  // seconds = seconds < 10 ? "0" + seconds : seconds;
-
-
-  // countdownEl.innerHTML = `${minutes} : ${seconds}`;
-  // time--;
-
-};
+var time = 12;
+var questionEl = 
+var question1 = "Inside which HTML element do we put the JavaScript?"
+var question2 = "How do you create a function in JavaScript?"
 
 
 
+document.getElementById("startBtn").addEventListener("click", function () {
+  startTime;
+
+  var startTime = function () {
+    if (time > 0) {
+      time -= 1;
+      console.log(time);
+      document.getElementById("timer").innerHTML = time;
+    }
+    else {
+      clearInterval(intervalId);
+      alert("time is up")
+    }
 
 
+  }
+  var intervalId = setInterval(startTime, 1000);
 
+  if (startTime() === true) {
 
+    //startQuiz = function () {
 
-// function startTime(duration, display) {
-//   var timer = duration, seconds;
-//   setInterval(function () {
-//     seconds = parseInt(timer, 60, 10);
-//     seconds = seconds < 10 ? "0" + seconds : seconds;
+    document.getElementById("questions").innerHTML = question1
 
-//     var display = document.getElementById("startTime");
-//     display.textContent = ("0" + seconds);
-//   })
-// }
+    //}
+  }
 
-
-
-
-//     if (--timer < 0) {
-
-//       window.alert = ("Your time has expired!")
-//     }
-
-
-
-//   }, 1000);
-// };
-
-
-
-
-
-
-
-
-
-
-
-
+});
