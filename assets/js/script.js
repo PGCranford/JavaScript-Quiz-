@@ -8,13 +8,7 @@ var buttonDEL = document.getElementById("answerD")
 var question1 = "Inside which HTML element do we put the JavaScript?"
 var question2 = "How do you create a function in JavaScript?"
 
-function correctAnswer {
-  [buttonAEL, buttonBEL, buttonCEL, buttonDEL]
-}
-
-
-
-
+var correctAnswer = [buttonAEL, buttonBEL, buttonCEL, buttonDEL]
 
 document.getElementById("startBtn").addEventListener("click", function () {
   startTime;
@@ -46,15 +40,16 @@ function round1() {
   buttonDEL.textContent = "script";
 
   //correct answer
-  if (correct) {
-    score = score + 1,
-      console.log(score)
+  addEventListener("click", correctAnswer[0], function () {
+    score = score + 1;
+    console.log(score);
 
-  }
+  });
   // incorrect answer
-  else (
-    time = time - 2
-  );
+  // else (
+  //   time = time - 2
+  // );
+
 
 };
 
@@ -67,8 +62,4 @@ function round2() {
   document.getElementById("answer-D").innerHTML = "script";
 
 
-
-
-
 }
-//}
