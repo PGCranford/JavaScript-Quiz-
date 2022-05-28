@@ -5,10 +5,10 @@ var buttonBEL = document.getElementById("answerB")
 var buttonCEL = document.getElementById("answerC")
 var buttonDEL = document.getElementById("answerD")
 
-var question1 = "Inside which HTML element do we put the JavaScript?"
-var question2 = "How do you create a function in JavaScript?"
+var questions = ["Inside which HTML element do we put the JavaScript?", "What is not a Primitive JavaScript?", "JavaScript is a _____ language?",
+  "Which of the following methods can be used to display data?", "How can a data type be declared to be a constant type?"]
 
-var correctAnswer = [buttonAEL, buttonBEL, buttonCEL, buttonDEL]
+var answerOne = ["<javascript>", "<scripting>", "<js>", "<script>"]
 
 document.getElementById("startBtn").addEventListener("click", function () {
   startTime;
@@ -32,19 +32,19 @@ document.getElementById("startBtn").addEventListener("click", function () {
 
 //if (time >= 0) {
 
-function round1() {
-  document.getElementById("questions").innerHTML = question1;
-  buttonAEL.textContent = "javascript";
-  buttonBEL.textContent = "scripting";
-  buttonCEL.textContent = "js";
-  buttonDEL.textContent = "script";
+var round1 = function () {
+  document.getElementById("questions").innerHTML = questions[0]
+  buttonAEL.textContent = answerOne[0]
+  buttonBEL.textContent = answerOne[1]
+  buttonCEL.textContent = answerOne[2]
+  buttonDEL.textContent = answerOne[3]
 
   //correct answer
-  addEventListener("click", correctAnswer[0], function () {
+  addEventListener("click", buttonAEL), function () {
     score = score + 1;
     console.log(score);
 
-  });
+  };
   // incorrect answer
   // else (
   //   time = time - 2
@@ -54,7 +54,7 @@ function round1() {
 };
 
 
-function round2() {
+var round2 = function () {
   document.getElementById("questions").innerHTML = question2;
   document.getElementById("answer-A").innerHTML = "javascript";
   document.getElementById("answer-B").innerHTML = "scripting";
