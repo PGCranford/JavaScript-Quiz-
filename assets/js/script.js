@@ -11,14 +11,6 @@ var startBtn = document.getElementById("startBtn");
 var timerEL = document.getElementById("timer");
 var name = "";
 
-// var questions = ["Inside which HTML element do we put the JavaScript?", "What is not a  JavaScript Primitive Data Type?", "JavaScript is a _____ language?",
-//   "Which of the following methods can be used to display data?", "How can a data type be declared to be a constant type?"]
-
-// var answerOne = ["<javascript>", "<scripting>", "<js>", "<script>"]
-// var answerTwo = ["String", "Boolean", "Array", "Number"]
-// var answerThree = ["Object-Based", "Object-Oriented", "Procedural", "Foreign"]
-// var answerFour = ["document.write()", "console.log()", "window.alert()", "All of the above"]
-// var answerFive = ["var", "const", "constant", "let"]
 
 
 document.getElementById("startBtn").addEventListener("click", function () {
@@ -73,14 +65,6 @@ function setQandA() {
   buttonCEL.textContent = qAObj[currentQuestionIndex].answers[2];
   buttonDEL.textContent = qAObj[currentQuestionIndex].answers[3];
 
-  // currentQuestion.answers.forEach(function (choice, i) {
-  //   var choiceBtn = document.createElement("button");
-  //   choiceBtn.setAttribute("class", "choice");
-  //   choiceBtn.setAttribute("value", choice);
-  //   choiceBtn.textContent = i + choice;
-  //   choiceBtn.onclick = checkAnswer;
-  //   answersEl.appendChild(choiceBtn);
-
 };
 
 
@@ -105,17 +89,6 @@ function checkAnswer(selectedAnswer) {
   };
 };
 
-//whether quiz continues 
-
-//   if (currentIndex === qAObj.length - 1) {
-//     alert("Your score is" + score);
-//     endQuiz();
-//   }
-//   else {
-//     currentIndex++;
-//     setQandA();
-//   };
-// };
 
 function endQuiz() {
   clearInterval(time)
