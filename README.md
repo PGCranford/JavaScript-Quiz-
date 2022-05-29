@@ -15,4 +15,4 @@
     Patrick Cranford 
 
 
-![alt text} (file:///C:/Users/PGCra/Desktop/JavaScriptQuiz/.html?)
+![alt text} (https://pgcranford.github.io/JavaScript-Quiz-/)
