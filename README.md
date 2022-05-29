@@ -15,4 +15,4 @@
     Patrick Cranford 
 
 
-![alt text} (https://pgcranford.github.io/JavaScript-Quiz-/)
+![image} (https://pgcranford.github.io/JavaScript-Quiz-/)
