@@ -52,13 +52,7 @@ function setQandA() {
   buttonBEL.textContent = qAObj[currentQuestionIndex].answers[1];
   buttonCEL.textContent = qAObj[currentQuestionIndex].answers[2];
   buttonDEL.textContent = qAObj[currentQuestionIndex].answers[3];
-  // currentQuestion.answers.forEach(function (choice, i) {
-  //   var choiceBtn = document.createElement("button");
-  //   choiceBtn.setAttribute("class", "choice");
-  //   choiceBtn.setAttribute("value", choice);
-  //   choiceBtn.textContent = i + choice;
-  //   choiceBtn.onclick = checkAnswer;
-  //   answersEl.appendChild(choiceBtn);
+
 };
 function checkAnswer(selectedAnswer) {
   var correctAnswer = qAObj[currentQuestionIndex].correctAnswer;
@@ -78,16 +72,6 @@ function checkAnswer(selectedAnswer) {
     setQandA();
   };
 };
-//whether quiz continues
-//   if (currentIndex === qAObj.length - 1) {
-//     alert("Your score is" + score);
-//     endQuiz();
-//   }
-//   else {
-//     currentIndex++;
-//     setQandA();
-//   };
-// };
 function endQuiz() {
   clearInterval(time)
 };
@@ -111,10 +95,7 @@ function saveScore() {
   localStorage.setItem(score, initials);
   startQuiz();
 };
-// valId = setInterval(startTime, 1000);
-// startBtn.onClick = startQuiz;
-//Event Listeners
-//startBtnEl.addEventListener("click", startQuiz);
+
 buttonAEL.addEventListener("click", function () {
   checkAnswer(buttonAEL.textContent);
 });
@@ -127,4 +108,4 @@ buttonCEL.addEventListener("click", function () {
 buttonDEL.addEventListener("click", function () {
   checkAnswer(buttonDEL.textContent);
 });
-//initialBtnEl.addEventListener("click", saveScore);
+initialBtnEl.addEventListener("click", saveScore);
