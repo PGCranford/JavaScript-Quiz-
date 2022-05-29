@@ -105,13 +105,7 @@ var startTime = function () {
     alert("time is up")
   }
 }
-// function finishQuiz() {
-//   clearInterval(quizTimer);
-//   document.getElementById("score-section").style.display = "block";
-//   document.getElementById("question-section").style.display = "none";
-//   document.getElementById("answer-section").style.display = "none";
-//   document.getElementById("timer").style.display = "none";
-// };
+
 function saveScore() {
   var initials = document.getElementById("initial-input").value;
   localStorage.setItem(score, initials);
