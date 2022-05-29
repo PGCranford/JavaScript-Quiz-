@@ -67,7 +67,6 @@ function setQandA() {
 
 };
 
-
 function checkAnswer(selectedAnswer) {
   var correctAnswer = qAObj[currentQuestionIndex].correctAnswer;
 
@@ -110,13 +109,6 @@ var startTime = function () {
   }
 }
 
-// function finishQuiz() {
-//   clearInterval(quizTimer);
-//   document.getElementById("score-section").style.display = "block";
-//   document.getElementById("question-section").style.display = "none";
-//   document.getElementById("answer-section").style.display = "none";
-//   document.getElementById("timer").style.display = "none";
-// };
 
 function saveScore() {
   var initials = document.getElementById("initial-input").value;
@@ -125,16 +117,7 @@ function saveScore() {
 };
 
 
-// valId = setInterval(startTime, 1000);
-
-
-
-
-// startBtn.onClick = startQuiz;
-
-//Event Listeners
-
-//startBtnEl.addEventListener("click", startQuiz);
+valId = setInterval(startTime, 1000);
 
 buttonAEL.addEventListener("click", function () {
   checkAnswer(buttonAEL.textContent);
