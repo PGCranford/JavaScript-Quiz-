@@ -1,5 +1,7 @@
 var time = 12
+var remainingTime = ""
 var score = ""
+var buttonQel = document.getElementById("questions")
 var buttonAEL = document.getElementById("answerA")
 var buttonBEL = document.getElementById("answerB")
 var buttonCEL = document.getElementById("answerC")
@@ -19,6 +21,64 @@ var answerFive = ["var", "const", "constant", "let"]
 document.getElementById("startBtn").addEventListener("click", function () {
   startTime;
 
+  var qAObj = [{
+    question: questions[0],
+    answers: answerOne,
+    correctAnswer: answerOne[0]
+  },
+  {
+    question: questions[1],
+    answers: answerTwo,
+    correctAnswer: answerTwo[1],
+  },
+  {
+    question: questions[2],
+    answers: answerThree,
+    correctAnswer: answerThree[0],
+
+  },
+  {
+    question: questions[3],
+    answers: answerFour,
+    correctAnswer: answerFour[3],
+
+  },
+  {
+    question: questions[4],
+    answers: answerFive,
+    correctAnswer: answerFive[1],
+  }
+  ];
+
+  function startQuiz() {
+    remainingTime = time;
+
+  };
+
+  function setQandA() {
+    buttonQel.textContent = qAObj[currentIndex].question[0];
+    answerOne.textContent = qAObj[currentIndex].answers[0];
+    answerOne.textContent = qAObj[currentIndex].answers[1];
+    answerOne.textContent = qAObj[currentIndex].answers[2];
+    answerOne.textContent = qAObj[currentIndex].answers[3];
+    answerOne.textContent = qAObj[currentIndex].answers[4];
+  };
+
+  function checkAnswer(selectedAnswer) {
+    var correctAnswer = qAObj[currentIndex].correctAnswer;
+
+    if (selectedAnswer === correctAnswer) {
+      alert("Correct!");
+      score += 5;
+    }
+    else {
+      alert("Incorrect");
+      time -= 5;
+    };
+
+
+  }
+
   var startTime = function () {
     if (time > 0) {
       time -= 1;
@@ -34,30 +94,12 @@ document.getElementById("startBtn").addEventListener("click", function () {
   valId = setInterval(startTime, 1000);
 
 });
-//if (time >= 0) {
-
-var round1 =
-  document.getElementById("questions").textContent = questions[0]
-buttonAEL.textContent = answerOne[0]
-buttonBEL.textContent = answerOne[1]
-buttonCEL.textContent = answerOne[2]
-buttonDEL.textContent = answerOne[3]
-
-//correct answer
-// if (addEventListener("click", buttonAEL)) {
-//   score = score + 1,
-//     console.log(score),
-// }
 
 
-// //incorrect answer
-// else (addEventListener("click", buttonBEL, buttonCEL, buttonDEL)){
-//   time = time - 2;
-// }
 
-var round2 =
-  document.getElementById("questions").innerHTML = questions[1];
-buttonAEL.textContent = answerTwo[0]
-buttonAEL.textContent = answerTwo[1]
-buttonAEL.textContent = answerTwo[2]
-buttonAEL.textContent = answerTwo[3]
+
+
+
+
+
+
